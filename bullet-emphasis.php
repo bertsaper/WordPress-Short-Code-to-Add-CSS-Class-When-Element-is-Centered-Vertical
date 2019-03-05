@@ -42,11 +42,9 @@ Author URI: http://saper.us
     $output  .= '            var scrollTopForStop = jQuery(document).scrollTop();' . chr(10);
     $output  .= '            var orientation = screen.msOrientation || screen.mozOrientation || (screen.orientation || {}).type;' . chr(10);     
     $output  .= '            var positionScrollTopAdjustment = ""' . chr(10);      
-    $output  .= '            if (orientation === "landscape-primary") {' . chr(10);
+    $output  .= '            if (orientation === "landscape-primary" || orientation === "landscape-secondary") {' . chr(10);
     $output  .= '                positionScrollTopAdjustment = 30;' . chr(10);
-    $output  .= '            } else if (orientation === "landscape-secondary") {' . chr(10);
-    $output  .= '                positionScrollTopAdjustment = 30;' . chr(10);  
-    $output  .= '            } else if (orientation === "portrait-secondary" || orientation === "portrait-primary") {' . chr(10);  
+    $output  .= '            } else if (orientation === "portrait-primary" || orientation === "portrait-secondary") {' . chr(10);  
     $output  .= '                positionScrollTopAdjustment = (intViewportHeight - 30);' . chr(10);
     $output  .= '            } else if (orientation === undefined) {' . chr(10);       
     $output  .= '                positionScrollTopAdjustment = 30;' . chr(10);  
